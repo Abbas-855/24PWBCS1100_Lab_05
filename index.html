@@ -3,60 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 05 - Task 1: Display Properties</title>
-    <link rel="stylesheet" href="styles/display.css">
+    <title>CS-224L - Lab 05 - Main Hub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 1px solid #dddfe2;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0d6efd;
+            margin: 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-list li {
+            background-color: #f8f9fa;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .task-list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+        .task-list a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .task-list a span {
+            font-weight: normal;
+            color: #6c757d;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
-    <h1>Task 1: Display Property Showcase</h1>
 
     <div class="container">
-        <h2>Block vs. Inline vs. Inline-Block</h2>
+        <header>
+            <h1>Web Technologies - Lab 05</h1>
+            <p>A comprehensive showcase of CSS Layout Techniques and Responsive Design.</p>
+        </header>
 
-        <div class="section">
-            <h3>Display: block</h3>
-            <div class="box block-box">Block 1</div>
-            <div class="box block-box">Block 2</div>
-            <p><code>display: block</code> elements start on a new line and take up the full width available.</p>
-        </div>
+        <main>
+            <h2>Main Tasks</h2>
+            <ul class="task-list">
+                <li><a href="layouts/display-showcase.html">Task 1: <span>Display Property Showcase</span></a></li>
+                <li><a href="layouts/magazine-float.html">Task 2: <span>Float-Based Magazine Layout</span></a></li>
+                <li><a href="layouts/positioning-challenge.html">Task 3: <span>Positioning Challenge</span></a></li>
+                <li><a href="layouts/flexbox-nav.html">Task 4: <span>Flexbox Navigation System</span></a></li>
+                <li><a href="layouts/flexbox-cards.html">Task 5: <span>Flexbox Card Layout</span></a></li>
+                <li><a href="layouts/grid-gallery.html">Task 6: <span>CSS Grid Photo Gallery</span></a></li>
+                <li><a href="layouts/holy-grail-comparison.html">Task 7: <span>Holy Grail Layout Implementation</span></a></li>
+                <li><a href="layouts/ecommerce-grid.html">Task 8: <span>E-commerce Product Grid</span></a></li>
+                <li><a href="layouts/dashboard-grid.html">Task 9: <span>Dashboard Layout</span></a></li>
+                <li><a href="layouts/responsive-demo.html">Task 10: <span>Media Query Demonstration Page</span></a></li>
+            </ul>
 
-        <div class="section">
-            <h3>Display: inline</h3>
-            <span class="box inline-box">Inline 1</span>
-            <span class="box inline-box">Inline 2</span>
-            <p><code>display: inline</code> elements do not start on a new line and only take up as much width as necessary.</p>
-        </div>
-
-        <div class="section">
-            <h3>Display: inline-block</h3>
-            <div class="box inline-block-box">Inline-Block 1</div>
-            <div class="box inline-block-box">Inline-Block 2</div>
-            <p><code>display: inline-block</code> is a hybrid. It's formatted like an inline element, but you can set a width and height on it.</p>
-        </div>
+            <h2>Advanced Challenges & Drills</h2>
+            <ul class="task-list">
+                <li><a href="layouts/magazine-grid.html">Task 11: <span>Responsive CSS Grid Magazine Layout</span></a></li>
+                <li><a href="layouts/flexbox-form.html">Task 12: <span>Flexbox Form Builder</span></a></li>
+                <li><a href="layouts/portfolio-mixed.html">Task 13: <span>Portfolio Layout with Mixed Techniques</span></a></li>
+                <li><a href="layouts/responsive-table.html">Task 14: <span>Responsive Data Table</span></a></li>
+                <li><a href="layouts/mobile-first-landing.html">Task 15: <span>Mobile-First Landing Page</span></a></li>
+                <li><a href="layouts/utility-classes.html">Task 17: <span>Responsive Utility Classes</span></a></li>
+                <li><a href="layouts/preferences-query.html">Task 18: <span>Dark Mode & Preference Media Queries</span></a></li>
+            </ul>
+        </main>
+        
+        <footer>
+            <p>Completed on October 18, 2025 in Peshawar, Pakistan.</p>
+        </footer>
     </div>
 
-    <div class="container">
-        <h2>Display: table</h2>
-        <div class="table-layout">
-            <div class="table-row">
-                <div class="table-cell">Cell 1</div>
-                <div class="table-cell">Cell 2</div>
-                <div class="table-cell">Cell 3</div>
-            </div>
-            <div class="table-row">
-                <div class="table-cell">Cell 4</div>
-                <div class="table-cell">Cell 5</div>
-                <div class="table-cell">Cell 6</div>
-            </div>
-        </div>
-        <p>Using <code>display: table</code>, <code>display: table-row</code>, and <code>display: table-cell</code> on divs to create a grid layout without using table markup.</p>
-    </div>
-
-    <div class="container">
-        <h2>Responsive Display Changes</h2>
-        <div class="responsive-box">
-            This box is hidden on screens smaller than 768px wide.
-        </div>
-        <p>This demonstrates using a media query to change the <code>display</code> property. By default, the box above is set to <code>display: none</code>. A media query makes it <code>display: block</code> on larger screens.</p>
-    </div>
-    </body>
+</body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Task 1: Display Properties</title>
+    <link rel="stylesheet" href="styles/display.css">
+</head>
+<body>
+    <h1>Task 1: Display Property Showcase</h1>
+
+    <div class="container">
+        <h2>Block vs. Inline vs. Inline-Block</h2>
+
+        <div class="section">
+            <h3>Display: block</h3>
+            <div class="box block-box">Block 1</div>
+            <div class="box block-box">Block 2</div>
+            <p><code>display: block</code> elements start on a new line and take up the full width available.</p>
+        </div>
+
+        <div class="section">
+            <h3>Display: inline</h3>
+            <span class="box inline-box">Inline 1</span>
+            <span class="box inline-box">Inline 2</span>
+            <p><code>display: inline</code> elements do not start on a new line and only take up as much width as necessary.</p>
+        </div>
+
+        <div class="section">
+            <h3>Display: inline-block</h3>
+            <div class="box inline-block-box">Inline-Block 1</div>
+            <div class="box inline-block-box">Inline-Block 2</div>
+            <p><code>display: inline-block</code> is a hybrid. It's formatted like an inline element, but you can set a width and height on it.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Display: table</h2>
+        <div class="table-layout">
+            <div class="table-row">
+                <div class="table-cell">Cell 1</div>
+                <div class="table-cell">Cell 2</div>
+                <div class="table-cell">Cell 3</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Cell 4</div>
+                <div class="table-cell">Cell 5</div>
+                <div class="table-cell">Cell 6</div>
+            </div>
+        </div>
+        <p>Using <code>display: table</code>, <code>display: table-row</code>, and <code>display: table-cell</code> on divs to create a grid layout without using table markup.</p>
+    </div>
+
+    <div class="container">
+        <h2>Responsive Display Changes</h2>
+        <div class="responsive-box">
+            This box is hidden on screens smaller than 768px wide.
+        </div>
+        <p>This demonstrates using a media query to change the <code>display</code> property. By default, the box above is set to <code>display: none</code>. A media query makes it <code>display: block</code> on larger screens.</p>
+    </div>
+    </body>
+</html>
