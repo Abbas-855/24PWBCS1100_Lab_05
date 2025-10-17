@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.container {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- Property Styles --- */
+
+.block-box {
+    background-color: #e74c3c; 
+    display: block;
+}
+
+.inline-box {
+    background-color: #3498db; 
+    display: inline;
+}
+
+.inline-block-box {
+    background-color: #2ecc71; 
+    display: inline-block;
+    width: 150px; 
+}
+/* --- Table Display Styles --- */
+
+.table-layout {
+    display: table;
+    width: 100%;
+    border-collapse: collapse; /* Behaves like a real table */
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid #95a5a6; /* Grey border */
+    padding: 15px;
+    text-align: center;
+    background-color: #f1c40f; /* Yellow */
+}
+/* --- Responsive & Hidden Element Styles --- */
+
+.responsive-box {
+    background-color: #9b59b6; /* Purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    /* Hidden by default (Mobile-First Approach) */
+    display: none;
+}
+
+/* --- Media Queries for Responsiveness --- */
+/* On screens that are 768px or wider, show the responsive-box */
+@media (min-width: 768px) {
+    .responsive-box {
+        display: block;
+    }
+}

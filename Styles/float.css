@@ -1,0 +1,76 @@
+/* --- Basic Page Styles --- */
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- Header and Footer Styles --- */
+.main-header, .main-footer {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #eee;
+}
+
+.main-footer {
+    border-top: 2px solid #eee;
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+/* --- Magazine Layout with Floats --- */
+.main-content {
+    float: left;
+    width: 65%;
+    padding-right: 2%; /* Gutter space */
+}
+
+.sidebar {
+    float: right;
+    width: 33%;
+}
+
+.article-image {
+    float: left;
+    margin: 0 15px 10px 0;
+    border-radius: 5px;
+}
+
+/* --- Clearfix Technique --- */
+/* This is crucial! It forces the .page-wrapper to contain its floated children. */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* --- Media Query for Responsiveness --- */
+/* On screens smaller than 768px... */
+@media (max-width: 768px) {
+
+    .main-content,
+    .sidebar {
+        /* Remove the float and make them full-width */
+        float: none;
+        width: 100%;
+        padding-right: 0; /* Reset the gutter */
+    }
+
+    .article-image {
+        /* On small screens, the image can take full width */
+        float: none;
+        width: 100%;
+        margin: 0 0 15px 0; /* Adjust margin for stacked layout */
+    }
+}

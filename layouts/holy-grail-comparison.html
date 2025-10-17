@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Task 7: Holy Grail Layout</title>
+    <link rel="stylesheet" href="../styles/holy-grail.css">
+</head>
+<body>
+
+    <h1>Holy Grail Layout Comparison</h1>
+
+    <div class="container float-container">
+        <h2>1. Float-Based Method</h2>
+        <header class="hg-header">Header</header>
+        <div class="hg-body clearfix">
+            <main class="hg-main">Main Content</main>
+            <aside class="hg-sidebar hg-sidebar-1">Left Sidebar</aside>
+            <aside class="hg-sidebar hg-sidebar-2">Right Sidebar</aside>
+        </div>
+        <footer class="hg-footer">Footer</footer>
+    </div>
+
+    <div class="container flex-container">
+        <h2>2. Flexbox Method</h2>
+        <header class="hg-header">Header</header>
+        <div class="hg-body">
+            <main class="hg-main">Main Content</main>
+            <aside class="hg-sidebar hg-sidebar-1">Left Sidebar</aside>
+            <aside class="hg-sidebar hg-sidebar-2">Right Sidebar</aside>
+        </div>
+        <footer class="hg-footer">Footer</footer>
+    </div>
+
+    <div class="container grid-container">
+        <h2>3. CSS Grid Method</h2>
+        <header class="hg-header">Header</header>
+        <main class="hg-main">Main Content</main>
+        <aside class="hg-sidebar hg-sidebar-1">Left Sidebar</aside>
+        <aside class="hg-sidebar hg-sidebar-2">Right Sidebar</aside>
+        <footer class="hg-footer">Footer</footer>
+    </div>
+
+</body>
+</html>

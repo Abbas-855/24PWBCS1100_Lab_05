@@ -1,0 +1,162 @@
+/* --- Shared Styles for All Holy Grail Layouts --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.hg-header, .hg-footer, .hg-main, .hg-sidebar {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hg-header {
+    background-color: #f28b82; /* Red */
+}
+
+.hg-main {
+    background-color: #c5e1a5; /* Green */
+}
+
+.hg-sidebar {
+    background-color: #81d4fa; /* Blue */
+}
+
+.hg-footer {
+    background-color: #f28b82; /* Red */
+}
+
+/* A simple clearfix for the float container */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* --- 1. Float-Based Method --- */
+.float-container .hg-body {
+    padding-left: 20%;  /* Space for the left sidebar */
+    padding-right: 20%; /* Space for the right sidebar */
+}
+
+.float-container .hg-main {
+    width: 100%;
+    float: left;
+}
+
+.float-container .hg-sidebar-1 {
+    width: 20%;
+    float: left;
+    margin-left: -100%;
+    position: relative;
+    right: 20%;
+}
+
+.float-container .hg-sidebar-2 {
+    width: 20%;
+    float: right;
+    margin-right: -20%;
+}
+
+/* --- Responsive styles for Float Method --- */
+@media (max-width: 768px) {
+    .float-container .hg-body {
+        padding: 0;
+    }
+    
+    .float-container .hg-main,
+    .float-container .hg-sidebar {
+        float: none;
+        width: auto; /* Resets width */
+        margin: 0;
+        position: static; /* Resets positioning */
+        right: auto;
+    }
+}
+/* --- 2. Flexbox Method --- */
+.flex-container .hg-body {
+    display: flex;
+}
+
+.flex-container .hg-main {
+    flex: 1; /* This makes the main content grow to fill available space */
+    order: 2; /* Main content is the 2nd item visually */
+}
+
+.flex-container .hg-sidebar-1 {
+    width: 20%;
+    order: 1; /* Left sidebar is the 1st item */
+}
+
+.flex-container .hg-sidebar-2 {
+    width: 20%;
+    order: 3; /* Right sidebar is the 3rd item */
+}
+
+/* --- Responsive styles for Flexbox Method --- */
+@media (max-width: 768px) {
+    .flex-container .hg-body {
+        flex-direction: column; /* Stack the items vertically */
+    }
+    
+    .flex-container .hg-main,
+    .flex-container .hg-sidebar {
+        width: auto; /* Reset width */
+        order: 0;    /* Reset order to follow HTML source */
+    }
+}
+/* --- 3. CSS Grid Method --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%; /* 3 columns: sidebar, main, sidebar */
+    grid-template-areas: 
+        "header header header"
+        "sidebar-1 main sidebar-2"
+        "footer footer footer";
+    gap: 15px;
+}
+
+/* Assign each element to its named grid area */
+.grid-container .hg-header {
+    grid-area: header;
+}
+
+.grid-container .hg-main {
+    grid-area: main;
+}
+
+.grid-container .hg-sidebar-1 {
+    grid-area: sidebar-1;
+}
+
+.grid-container .hg-sidebar-2 {
+    grid-area: sidebar-2;
+}
+
+.grid-container .hg-footer {
+    grid-area: footer;
+}
+
+/* --- Responsive styles for Grid Method --- */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* A single column */
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar-1"
+            "sidebar-2"
+            "footer";
+    }
+}

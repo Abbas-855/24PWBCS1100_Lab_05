@@ -1,0 +1,93 @@
+/* --- Task 18: Preference Media Queries CSS --- */
+
+/* --- Default Theme (Light Mode) using CSS Variables --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --box-bg-color: #f0f0f0;
+    --accent-color: #3498db;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    padding: 20px;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--box-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Animation Styling --- */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide the print-only message by default */
+.print-only {
+    display: none;
+}
+
+
+/* --- 1. Dark Mode Preference --- */
+@media (prefers-color-scheme: dark) {
+    /* Redefine CSS variables for dark mode */
+    :root {
+        --bg-color: #2c3e50;
+        --text-color: #ecf0f1;
+        --box-bg-color: #34495e;
+        --accent-color: #5dade2;
+    }
+}
+
+/* --- 2. Reduced Motion Preference --- */
+@media (prefers-reduced-motion: reduce) {
+    /* Turn off animations and transitions */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* --- 3. Print Styles --- */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .content-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .animated-box-container {
+        display: none; /* Hide the animation when printing */
+    }
+
+    .print-only {
+        display: block; /* Show the print-only message */
+        color: black;
+        font-style: italic;
+    }
+}

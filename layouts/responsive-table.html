@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Task 14: Responsive Data Table</title>
+    <link rel="stylesheet" href="../styles/table.css">
+</head>
+<body>
+
+    <header class="table-header">
+        <h1>User Data</h1>
+        <p>A responsive table that transforms on smaller screens.</p>
+    </header>
+
+    <table class="responsive-data-table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="User ID">101</td>
+                <td data-label="First Name">Aisha</td>
+                <td data-label="Last Name">Khan</td>
+                <td data-label="Email">a.khan@example.com</td>
+                <td data-label="Status">Active</td>
+            </tr>
+            <tr>
+                <td data-label="User ID">102</td>
+                <td data-label="First Name">Bilal</td>
+                <td data-label="Last Name">Ahmed</td>
+                <td data-label="Email">b.ahmed@example.com</td>
+                <td data-label="Status">Inactive</td>
+            </tr>
+            <tr>
+                <td data-label="User ID">103</td>
+                <td data-label="First Name">Fatima</td>
+                <td data-label="Last Name">Ali</td>
+                <td data-label="Email">f.ali@example.com</td>
+                <td data-label="Status">Active</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

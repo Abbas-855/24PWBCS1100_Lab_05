@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Task 17: Responsive Utility Classes</title>
+    <link rel="stylesheet" href="../styles/utilities.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Utility Class Demo</h1>
+    </header>
+
+    <div class="container">
+        <h2>Show/Hide Utilities</h2>
+        <div class="box hide-md-down">Visible on Medium screens and UP</div>
+        <div class="box show-md-down">Visible on Medium screens and DOWN</div>
+        <div class="box hide-lg-only">HIDDEN only on Large screens</div>
+
+        <h2>Text Alignment Utilities</h2>
+        <p class="text-sm-center text-md-left text-lg-right">
+            This text is centered on mobile, left-aligned on tablet, and right-aligned on desktop.
+        </p>
+
+        <h2>Flexbox Utilities</h2>
+        <div class="flex-container flex-sm-column flex-md-row justify-lg-between">
+            <div class="box">Flex Item 1</div>
+            <div class="box">Flex Item 2</div>
+            <div class="box">Flex Item 3</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* --- Task 17: Responsive Utility Classes --- */
+
+/* --- Basic Setup & Breakpoint Variables --- */
+:root {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+}
+
+.box {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* --- UTILITY CLASSES --- */
+
+/* --- 1. Show/Hide Utilities (Mobile First) --- */
+.hide { display: none !important; }
+
+@media (min-width: 768px) {
+    .hide-md-up { display: none !important; }
+    .show-md-up { display: block !important; }
+}
+@media (max-width: 767.98px) {
+    .hide-md-down { display: none !important; }
+    .show-md-down { display: block !important; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hide-lg-only { display: none !important; }
+    .show-lg-only { display: block !important; }
+}
+
+/* --- 2. Text Alignment Utilities --- */
+.text-sm-center { text-align: center; }
+.text-sm-left   { text-align: left; }
+.text-sm-right  { text-align: right; }
+
+@media (min-width: 768px) {
+    .text-md-center { text-align: center; }
+    .text-md-left   { text-align: left; }
+    .text-md-right  { text-align: right; }
+}
+@media (min-width: 992px) {
+    .text-lg-center { text-align: center; }
+    .text-lg-left   { text-align: left; }
+    .text-lg-right  { text-align: right; }
+}
+
+/* --- 3. Flexbox Utilities --- */
+.flex-container { display: flex; gap: 15px; }
+
+/* Default (Mobile) */
+.flex-sm-column { flex-direction: column; }
+.flex-sm-row    { flex-direction: row; }
+
+@media (min-width: 768px) {
+    .flex-md-column { flex-direction: column; }
+    .flex-md-row    { flex-direction: row; }
+}
+@media (min-width: 992px) {
+    .justify-lg-between { justify-content: space-between; }
+    .align-lg-center    { align-items: center; }
+}

@@ -1,0 +1,122 @@
+/* --- Task 15: Mobile-First Landing Page CSS --- */
+
+/* --- Base (Mobile) Styles --- */
+:root {
+    --primary-color: #007bff;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+/* Mobile: Header and Nav stack */
+.site-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-nav {
+    margin-top: 15px;
+}
+
+.main-nav a {
+    color: var(--dark-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Hero section styling */
+.hero {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile: Features stack vertically */
+.features {
+    padding: 40px 0;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* CTA Banner styling */
+.cta-banner {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.site-footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* --- Progressive Enhancement for Tablet (>= 768px) --- */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Tablet: Display features in a grid */
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* --- Progressive Enhancement for Desktop (>= 1024px) --- */
+@media (min-width: 1024px) {
+    /* Desktop: Horizontal header layout */
+    .site-header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        margin-top: 0;
+    }
+}

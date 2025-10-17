@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Task 9: Dashboard Layout</title>
+    <link rel="stylesheet" href="../styles/grid.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-container">
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+
+        <header class="dashboard-header">
+            <label for="sidebar-toggle" class="sidebar-toggle-label">
+                &#9776; </label>
+            <div class="header-title">Dashboard</div>
+        </header>
+
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-main">
+            <h2>Overview</h2>
+            <div class="stat-cards-container">
+                <div class="stat-card">
+                    <h4>Users</h4>
+                    <p>1,250</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Sales</h4>
+                    <p>$3,480</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Messages</h4>
+                    <p>32</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Pending</h4>
+                    <p>4</p>
+                </div>
+            </div>
+
+            <div class="main-content-panel">
+                <h3>Recent Activity</h3>
+                <p>This is where main dashboard content like charts and tables would go.</p>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

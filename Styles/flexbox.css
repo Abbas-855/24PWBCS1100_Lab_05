@@ -1,0 +1,299 @@
+/* --- Basic Page & Nav Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.page-content {
+    padding: 20px;
+}
+
+/* --- Flexbox Navigation Bar --- */
+.navbar {
+    display: flex; /* This is the key that activates Flexbox! */
+    justify-content: space-between; /* Pushes logo and menu to opposite ends */
+    align-items: center; /* Vertically aligns items in the center */
+    background-color: #333;
+    padding: 1rem 1.5rem;
+}
+
+.nav-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex; /* We use flex on the menu list itself */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Adds space between menu items */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bcd4; /* Cyan */
+}
+
+/* --- Mobile Menu Toggle (Hidden on Desktop) --- */
+.nav-toggle,
+.nav-toggle-label {
+    display: none;
+}
+/* --- Media Query for Mobile Navigation --- */
+@media (max-width: 768px) {
+    /* Stack the nav menu vertically */
+    .nav-menu {
+        position: absolute;
+        top: 60px; /* Position it right below the navbar */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        /* Hide the menu off-screen by default */
+        transform: translateY(-110%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1.5rem;
+        width: 100%;
+        border-bottom: 1px solid #444;
+    }
+    
+    /* Show the hamburger menu icon */
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        /* Simple styling for the hamburger icon lines */
+        width: 25px;
+        height: 20px;
+        position: relative;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle-label span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-toggle-label span::before {
+        top: -8px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 8px;
+    }
+    
+    /* This is the key: When the checkbox is checked, slide the menu into view */
+    .nav-toggle:checked ~ .nav-menu {
+        transform: translateY(0);
+    }
+}
+/* --- Task 5: Flexbox Card Layout Styles --- */
+
+/* --- General Styles for the Card Page --- */
+.card-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* --- Card Container: The Flex Parent --- */
+.card-container {
+    display: flex; /* Activates Flexbox */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Creates space between the cards */
+    padding: 20px;
+}
+
+/* --- Individual Card Styling --- */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures the image corners are rounded */
+    
+    /* This is the key to making the card a flex container for its own children */
+    display: flex;
+    flex-direction: column; /* Stacks the card's content vertically */
+    
+    /* --- Mobile First Approach --- */
+    /* By default (on mobile), each card takes up nearly the full width */
+    flex-basis: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Card Content Styling --- */
+.card-body {
+    padding: 15px;
+    /* This makes the body grow to fill available space, pushing the footer down */
+    flex-grow: 1; 
+}
+
+.card-title {
+    margin-top: 0;
+}
+
+.card-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Media Queries for Responsive Columns --- */
+
+/* --- Tablet View: 2 Columns --- */
+@media (min-width: 600px) {
+    .card {
+        /* Each card takes up roughly half the container's width, accounting for the gap */
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+/* --- Desktop View: 3 Columns --- */
+@media (min-width: 900px) {
+    .card {
+        /* Each card takes up roughly a third of the container's width */
+        flex-basis: calc(33.333% - 14px);
+    }
+}
+/* --- Task 12: Flexbox Form Layout --- */
+
+.form-body {
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-header h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stacks label on top of input */
+    margin-bottom: 15px;
+}
+
+/* This is the key for multi-column layouts */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between the form groups */
+}
+
+/* Make form groups inside a row share the space */
+.form-row .form-group {
+    flex: 1; 
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    /* Stack the multi-column rows vertically on mobile */
+    .form-row {
+        flex-direction: column; /* This is the magic! */
+        gap: 0; /* Remove gap when stacking */
+    }
+}
